@@ -1,0 +1,40 @@
+.our-vision-section .our-vision,
+.our-vision-section .our-mission {
+  border-left: 7px solid #6608AF;
+}
+
+.our-vision-section .mission-box,
+.our-vision-section .vision-box {
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1607843137254902);
+  border-radius: 8px;
+  padding: 30px 25px 25px 25px;
+}
+
+.our-vision-section .vision-title {
+    text-align: left;
+    letter-spacing: .47px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    opacity: 1;
+}
+
+.our-vision-section .core-value {
+    border-left: 7px solid #ef4b36;
+    display: flex;
+    align-items: center;
+}
+
+.core-img {
+    width: 52px;
+    height: 52px;
+}
+
+.core-contain {
+    text-align: left;
+    font: normal normal 600 20px/32px Poppins;
+    letter-spacing: 0;
+    color: #000;
+    opacity: .8;
+    margin-left: 15px;
+}

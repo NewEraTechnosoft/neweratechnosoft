@@ -1,0 +1,26 @@
+.model-input{
+    width: 100%;
+    border: 1px solid #6608AF;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f6e9ff;
+    font-family: "Nunito";
+    color: #6608AF;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+.model-select{
+    font: bold 16px nunito;
+    text-align: left;
+    letter-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    border: 0;
+    background-color: #f6e9ff;
+    outline: 0;
+    color: #6608AF; 
+}

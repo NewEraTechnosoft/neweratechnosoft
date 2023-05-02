@@ -1,0 +1,25 @@
+.expertise{
+    background-color: aliceblue;
+}
+
+.all-tech {
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 0 6px rgba(0,0,0,.1607843137254902);
+    border-radius: 4px;
+    opacity: 1;
+    padding: 10px 21px;
+    margin-bottom: 28px;
+    border-left: 6px solid;
+}
+.techno-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.tech-label{
+    text-align: left;
+    letter-spacing: 0;
+    opacity: 1;
+    padding-top: 2px;
+    white-space: nowrap;
+}
