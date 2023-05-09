@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknew_era_technosoft=self.webpackChunknew_era_technosoft||[]).push([[383],{4383:function(e,s,n){n.r(s);n(2791);var a=n(7256),c=n(184);s.default=function(){return(0,c.jsx)("div",{className:"container",children:(0,c.jsx)("div",{className:"py-3",children:(0,c.jsx)("img",{src:a.L7,alt:"Work In Progress ",className:"img-fluid mx-auto"})})})}}}]);
-//# sourceMappingURL=383.a3e7be59.chunk.js.map

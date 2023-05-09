@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/580.82eed249.chunk.css","mappings":"AAAA,OACI,wBAAyB,CACzB,cACJ","sources":["Components/Global/Footer/Footer.css"],"sourcesContent":["footer{\r\n    background-color: #161616;\r\n    padding: 30px 0px;\r\n}"],"names":[],"sourceRoot":""}
