@@ -19,6 +19,9 @@ import RonakDomadiya from "./ronak-domadiya.png";
 import ServicesHeader from "./services-header.png";
 import Loader from "./loader.gif";
 import workInProgress from "./workinprogress.gif";
+import productAnniversary from "./products/anniversary.png"
+import productCricketLive from "./products/cricket_live_score.png"
+import productPDFCreator from "./products/pdf_creator.png"
 
 export {
   logoIcon,
@@ -41,5 +44,8 @@ export {
   RonakDomadiya,
   ServicesHeader,
   Loader,
-  workInProgress
+  workInProgress,
+  productAnniversary,
+  productPDFCreator,
+  productCricketLive
 };

@@ -55,6 +55,12 @@ const Navigation = () => {
           >
             Services
           </Link>
+          <Link
+            to={"/products"}
+            className="text-lg font-semibold leading-6 text-neweraBlue text-decoration-none hover:text-neweraOrange duration-300"
+          >
+            Products
+          </Link>
           <button
             onClick={() => setModel(true)}
             className="text-lg font-semibold leading-6 text-neweraBlue text-decoration-none hover:text-neweraOrange duration-300"
@@ -109,6 +115,12 @@ const Navigation = () => {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neweraBlue text-decoration-none hover:bg-gray-50 hover:text-neweraOrange"
                 >
                   Services
+                </Link>
+                <Link
+                  to={"/products"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neweraBlue text-decoration-none hover:bg-gray-50 hover:text-neweraOrange"
+                >
+                  Products
                 </Link>
                 <button
                 onClick={() => setModel(true)}

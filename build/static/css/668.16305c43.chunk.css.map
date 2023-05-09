@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/668.16305c43.chunk.css","mappings":"AAAA,cACI,YAAa,CACb,sBACJ","sources":["Pages/AboutUs/SubComponents/Pioneers/Pioneers.css"],"sourcesContent":[".pioneers-img{\n    display: flex;\n    justify-content: center;\n}"],"names":[],"sourceRoot":""}

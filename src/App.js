@@ -15,6 +15,7 @@ const Home = React.lazy(() => import("./Pages/Home/Home"));
 const AboutUs = React.lazy(() => import("./Pages/AboutUs/AboutUs"));
 const Services = React.lazy(() => import("./Pages/Services/Services"));
 const InProgress = React.lazy(() => import("./Pages/InProgress/InProgress"));
+const Products = React.lazy(() => import("./Pages/Products/Products"));
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/" element={<Home/>}/>
           <Route path="/about-us" element={<AboutUs/>}/>
           <Route path="/services" element={<Services/>}/>
+          <Route path="/products" element={<Products/>}/>
           <Route path="*" element={<InProgress/>}/>
         </Routes>
         <Footer />

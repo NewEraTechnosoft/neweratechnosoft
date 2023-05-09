@@ -7,29 +7,49 @@ import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import "./Model.css";
-import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 function MyVerticallyCenteredModal(props) {
-  const [interest, setInterest] = useState("");
-  const [industry, setIndustry] = useState("");
-  const [budget, setBudget] = useState("");
-  const navigate = useNavigate();
+  const [ inqary, setInquary ] = useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    instrested:"",
+    industry:"",
+    budget:"",
+    message:""
+  });
 
   const handleChange = (e) => {
-    setInterest(e.target.value);
+    setInquary({...inqary, instrested:e.target.value})
   };
 
   const handleIndustry = (e) => {
-    setIndustry(e.target.value);
+    setInquary({...inqary, industry:e.target.value})
   };
 
   const handleBudget = (e) => {
-    setBudget(e.target.value);
+    setInquary({...inqary, budget:e.target.value})
   };
 
-  const handleSubmit = (e) => {
+  const handleInput = (e) => {
+    setInquary({...inqary, [e.target.name] : e.target.value})
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/");
+    try{
+      const validation = inqary?.firstName &&  inqary?.lastName && inqary?.email && inqary?.instrested && inqary?.industry && inqary?.budget && inqary?.message
+      if(!validation){
+        toast.error("All Field Are Required")
+      } else{
+        await axios.post('https://new-era-inqury-default-rtdb.firebaseio.com/inquary.json', {...inqary, date: new Date()})
+        props.onHide()
+      }
+    } catch (error){
+      console.log(error);
+    }
   };
 
   const interestDepart = ["Designing", "Engineering", "Development", "Sales"];
@@ -90,7 +110,10 @@ function MyVerticallyCenteredModal(props) {
                   id="outlined-basic"
                   label="First Name"
                   variant="outlined"
+                  name="firstName"
+                  value={inqary?.firstName}
                   className="model-input"
+                  onChange={handleInput}
                 />
               </div>
               <div className="col-12 col-md-6 mb-4">
@@ -98,7 +121,10 @@ function MyVerticallyCenteredModal(props) {
                   id="outlined-basic"
                   label="Last Name"
                   variant="outlined"
+                  name="lastName"
+                  value={inqary?.lastName}
                   className="model-input"
+                  onChange={handleInput}
                 />
               </div>
               <div className="col-12 col-md-6 mb-4">
@@ -107,6 +133,9 @@ function MyVerticallyCenteredModal(props) {
                   label="Email"
                   variant="outlined"
                   className="model-input"
+                  name="email"
+                  value={inqary?.email}
+                  onChange={handleInput}
                 />
               </div>
               <div className="col-12 col-md-6 mb-4">
@@ -117,7 +146,7 @@ function MyVerticallyCenteredModal(props) {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={interest}
+                    value={inqary?.instrested}
                     label="Interested in"
                     onChange={handleChange}
                     className="model-select"
@@ -140,7 +169,7 @@ function MyVerticallyCenteredModal(props) {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={industry}
+                    value={inqary?.industry}
                     label="Industry"
                     onChange={handleIndustry}
                     className="model-select"
@@ -163,7 +192,7 @@ function MyVerticallyCenteredModal(props) {
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={budget}
+                    value={inqary?.budget}
                     label="Your Budget"
                     onChange={handleBudget}
                     className="model-select"
@@ -185,10 +214,13 @@ function MyVerticallyCenteredModal(props) {
                   multiline
                   maxRows={4}
                   className="model-input"
+                  name="message"
+                  value={inqary?.message}
+                  onChange={handleInput}
                 />
               </div>
               <div className="col-12  text-center">
-                <button className="font-bodyFont bg-neweraBlue text-white hover:bg-neweraOrange duration-300 py-2 px-5 rounded-lg">
+                <button className="font-bodyFont bg-neweraBlue text-white hover:bg-neweraOrange duration-300 py-2 px-5 rounded-lg" >
                   Submit
                 </button>
               </div>
